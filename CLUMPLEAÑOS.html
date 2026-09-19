@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Feliz cumpleaños, mi amor ♡</title>
+
+
+<style>
+
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(110, 45, 90, 0.45),
+            transparent 45%
+        ),
+
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(90, 35, 70, 0.25),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            180deg,
+            #09070a,
+            #140d14 45%,
+            #09070a
+        );
+
+}
+
+
+/* =====================================================
+   BRILLO DE FONDO
+===================================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255, 100, 180, 0.08) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+
+    animation: fondoMover 18s linear infinite;
+
+}
+
+
+@keyframes fondoMover {
+
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 45px 45px;
+    }
+
+}
+
+
+/* =====================================================
+   INTRODUCCIÓN
+===================================================== */
+
+.inicio {
+
+    min-height: 70vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 70px 25px;
+
+    position: relative;
+
+    border-top: 2px solid #ff5eaa;
+
+    border-bottom: 1px solid rgba(255, 100, 175, 0.25);
+
+    overflow: hidden;
+
+}
+
+
+/* Línea brillante */
+
+.inicio::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: #ff91c5;
+
+    box-shadow:
+        0 0 15px #ff4fa3,
+        0 0 30px #ff4fa3;
+
+    animation: linea 5s linear infinite;
+
+}
+
+
+@keyframes linea {
+
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+
+}
+
+
+/* Corazones del título */
+
+.corazones-titulo {
+
+    color: #ff69ad;
+
+    font-size: 38px;
+
+    letter-spacing: 12px;
+
+    margin-bottom: 25px;
+
+    animation: latido 2s ease-in-out infinite;
+
+    text-shadow:
+        0 0 10px #ff3e9d,
+        0 0 25px rgba(255, 50, 150, 0.5);
+
+}
+
+
+@keyframes latido {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.13);
+    }
+
+}
+
+
+/* Título */
+
+.inicio h1 {
+
+    margin: 0;
+
+    font-size: clamp(42px, 7vw, 78px);
+
+    line-height: 1.1;
+
+    color: #ff7abb;
+
+    text-shadow:
+
+        0 0 8px rgba(255, 80, 170, .6),
+
+        0 0 25px rgba(255, 50, 150, .3),
+
+        4px 4px 0 #090609;
+
+    animation: aparecerTitulo 1.5s ease forwards;
+
+}
+
+
+@keyframes aparecerTitulo {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* Texto inicial */
+
+.inicio p {
+
+    max-width: 700px;
+
+    margin-top: 30px;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #f0dce7;
+
+    animation: aparecerTexto 2s ease forwards;
+
+}
+
+
+@keyframes aparecerTexto {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   PEQUEÑOS BRILLOS
+===================================================== */
+
+.brillo {
+
+    position: absolute;
+
+    color: #ffb4d7;
+
+    pointer-events: none;
+
+    animation: brilloAnim 3s ease-in-out infinite;
+
+}
+
+
+@keyframes brilloAnim {
+
+    0%,
+    100% {
+
+        opacity: .1;
+
+        transform: scale(.7);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform: scale(1.3);
+
+    }
+
+}
+
+
+/* =====================================================
+   SECCIÓN DE LA CARTA
+===================================================== */
+
+.carta-seccion {
+
+    width: min(950px, 92%);
+
+    margin: 80px auto 100px;
+
+    position: relative;
+
+}
+
+
+.titulo-carta {
+
+    text-align: center;
+
+    font-size: 36px;
+
+    color: #ff79b9;
+
+    margin-bottom: 40px;
+
+    text-shadow:
+
+        0 0 10px rgba(255, 80, 170, .5);
+
+    animation: aparecerCarta 1.5s ease;
+
+}
+
+
+@keyframes aparecerCarta {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   PAPEL DE LA CARTA
+===================================================== */
+
+.carta {
+
+    position: relative;
+
+    padding: 60px;
+
+    color: #2b2024;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    text-align: left;
+
+    border-radius: 5px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #fff5f3,
+            #f1dfdf
+        );
+
+    box-shadow:
+
+        0 25px 70px rgba(0, 0, 0, .65),
+
+        0 0 30px rgba(255, 70, 160, .08);
+
+    transform: rotate(-0.35deg);
+
+    animation: cartaEntrada 1.8s ease;
+
+}
+
+
+/* Entrada de carta */
+
+@keyframes cartaEntrada {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(60px)
+            rotate(-2deg);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            rotate(-0.35deg);
+
+    }
+
+}
+
+
+/* Textura del papel */
+
+.carta::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: .25;
+
+    background:
+
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 3px,
+            rgba(80, 40, 50, .035) 4px
+        );
+
+}
+
+
+/* Corazón arriba */
+
+.carta::after {
+
+    content: "♡";
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 28px;
+
+    font-size: 45px;
+
+    color: #d95c91;
+
+    transform: rotate(8deg);
+
+}
+
+
+/* =====================================================
+   PÁRRAFOS
+===================================================== */
+
+.carta p {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin:
+
+        0
+
+        0
+
+        30px;
+
+}
+
+
+/* Primera letra */
+
+.carta p:first-child::first-letter {
+
+    font-size: 34px;
+
+    color: #c34d82;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   FIRMA
+===================================================== */
+
+.firma {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 50px;
+
+    padding-top: 25px;
+
+    border-top:
+
+        1px solid
+
+        rgba(120, 60, 80, .25);
+
+    text-align: right;
+
+    font-size: 21px;
+
+    color: #633c4d;
+
+    font-style: italic;
+
+}
+
+
+/* =====================================================
+   TEXTO FINAL
+===================================================== */
+
+.final {
+
+    width: min(850px, 90%);
+
+    margin:
+
+        140px auto
+
+        100px;
+
+    text-align: center;
+
+    padding: 55px 30px;
+
+    border-top:
+
+        1px solid
+
+        rgba(255, 100, 175, .3);
+
+    border-bottom:
+
+        1px solid
+
+        rgba(255, 100, 175, .3);
+
+    animation: aparecerFinal 2s ease;
+
+}
+
+
+@keyframes aparecerFinal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.final .corazones {
+
+    font-size: 35px;
+
+    color: #ff67ae;
+
+    letter-spacing: 12px;
+
+    margin-bottom: 25px;
+
+    animation: latido 2s infinite;
+
+}
+
+
+.final h2 {
+
+    color: #ff7abb;
+
+    font-size: 32px;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 10px rgba(255, 70, 160, .4);
+
+}
+
+
+.final p {
+
+    font-family: Georgia, serif;
+
+    color: #ead5e1;
+
+    font-size: 19px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =====================================================
+   CORAZONES FLOTANTES
+===================================================== */
+
+.corazon-flotante {
+
+    position: fixed;
+
+    top: -50px;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    color: #ff5fa9;
+
+    text-shadow:
+
+        0 0 8px #ff3e9d,
+
+        0 0 15px rgba(255, 50, 150, .4);
+
+    animation-name: caer;
+
+    animation-timing-function: linear;
+
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes caer {
+
+    0% {
+
+        transform:
+
+            translateY(-50px)
+
+            rotate(0deg)
+
+            scale(.8);
+
+        opacity: 0;
+
+    }
+
+
+    10% {
+
+        opacity: 1;
+
+    }
+
+
+    50% {
+
+        transform:
+
+            translateY(50vh)
+
+            rotate(180deg)
+
+            scale(1);
+
+    }
+
+
+    100% {
+
+        transform:
+
+            translateY(110vh)
+
+            rotate(360deg)
+
+            scale(.7);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =====================================================
+   CORAZONES AL HACER CLICK
+===================================================== */
+
+.click-corazon {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 10000;
+
+    color: #ff65ad;
+
+    font-size: 25px;
+
+    animation: clickAnim 1s ease forwards;
+
+}
+
+
+@keyframes clickAnim {
+
+    0% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(.5);
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -120px)
+            scale(1.5);
+
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media(max-width: 700px) {
+
+
+    .inicio {
+
+        min-height: 65vh;
+
+        padding:
+            50px 20px;
+
+    }
+
+
+    .inicio h1 {
+
+        font-size: 43px;
+
+    }
+
+
+    .inicio p {
+
+        font-size: 17px;
+
+    }
+
+
+    .corazones-titulo {
+
+        font-size: 30px;
+
+    }
+
+
+    .carta-seccion {
+
+        width: 94%;
+
+        margin-top: 55px;
+
+    }
+
+
+    .carta {
+
+        padding:
+            38px 25px;
+
+        font-size: 17px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .titulo-carta {
+
+        font-size: 30px;
+
+    }
+
+
+    .final {
+
+        margin-top: 100px;
+
+    }
+
+
+    .final p {
+
+        font-size: 17px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     INTRODUCCIÓN
+===================================================== -->
+
+<section class="inicio">
+
+
+    <!-- Brillitos -->
+
+    <span
+        class="brillo"
+        style="top:20%; left:15%;">
+        ✦
+    </span>
+
+
+    <span
+        class="brillo"
+        style="top:35%; right:15%; animation-delay:1s;">
+        ✧
+    </span>
+
+
+    <span
+        class="brillo"
+        style="bottom:20%; left:25%; animation-delay:2s;">
+        ✦
+    </span>
+
+
+    <span
+        class="brillo"
+        style="bottom:30%; right:25%; animation-delay:.5s;">
+        ✧
+    </span>
+
+
+    <div class="corazones-titulo">
+
+        ♡ ♥ ♡
+
+    </div>
+
+
+    <h1>
+
+        ¡Feliz cumpleaños,<br>
+
+        mi amor! ♡
+
+    </h1>
+
+
+    <p>
+
+        Hoy es un día muy especial...
+
+        y quiero que sepas que eres
+
+        una de las personas más importantes
+
+        en mi vida. ♡
+
+    </p>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CARTA
+===================================================== -->
+
+<section class="carta-seccion">
+
+
+    <h2 class="titulo-carta">
+
+        ♡ Una carta para ti ♡
+
+    </h2>
+
+
+    <div class="carta">
+
+
+        <p>
+
+            hoy cumples años mi amor pechocho, hora de ir agarrando la pala y conseguir laburo amorcito, pero mas haya de eso, es el dia en ke te viniste a este mundo amochito, estoy agradecido de poder pasar este primer cumpleaños contigo mi vida, pero mas feliz de saber que este dia tambien celebramos nuestro segundo mes kuntos amor, se que van a ser mas de dos si ambos le ponemos muchas ganas mi vida hermosa.
+
+        </p>
+
+
+        <p>
+
+            agradezco dia a dia el momento el el cual te conoci, porque desde aquel momento supe que merecia la pena seguir viviendo, merecia la pena darme una ultima oportunidad para amar y por sobretodo ser amado por una mujer tan grata, hermosa y heterea como tu amochito nindo de mi vida, puede que este no sea el mejor de los regalos que pueda hacerte de forma virtual pero le he puesto empeño desde el momento en que fui conciente de que verdaderamente ibamos a estar juntos por siempre, y por mas simple que sea esta patetica carta, la hago con todo mi corazon amor, con mi alma entera te escribo esto, porque te amo, ser amamado por ti es de lo mejor que un simple mortal como yo puede recibir.
+
+        </p>
+
+
+        <p>
+
+            el porque me amas es una pregunta que me hago diariamente, pero nunca me cuestiono el verdadero valor de tu amor, jamas lo haria.
+
+        </p>
+
+
+        <p>
+
+            se que esta fecha no signifique mucho para ti antonella, pero para mi, saber que estoy pasando una fecha importante contigo es mas que suficiente para hacerme feliz tanto como el saber meramente de tu existencia.
+
+        </p>
+
+
+        <p>
+
+            te amo mi vida hermosa, se que no estoy ahi para ti ahora mismo pero de forma onlain siempre voy a estar contigo hasta que llegue el momento de estar juntos eternamente amorcito bello.
+
+        </p>
+
+
+        <p>
+
+            puede que ahora mismo no estemos juntos, pero si quieres saber algo en mis sueños siempre estaremos juntos eternamente amor.
+
+        </p>
+
+
+        <p>
+
+            Dejame disfrutar de este dia contigo mi pansito de chokolate.
+
+        </p>
+
+
+        <div class="firma">
+
+            -que hoy sea el primero de muchos cumpleaños mi vida hermosa.
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     TEXTO FINAL
+===================================================== -->
+
+<section class="final">
+
+
+    <div class="corazones">
+
+        ♡ ♥ ♡
+
+    </div>
+
+
+    <h2>
+
+        yuna ultima kosa amo xddx
+
+    </h2>
+
+
+    <p>
+
+        cada palabra que puse aquí
+
+        salió directamente de mi corazón.
+
+    </p>
+
+
+    <p>
+
+        Espero poder seguir celebrando
+
+        muchos cumpleaños más contigo. ♡
+
+    </p>
+
+
+    <p>
+
+        Te amo muchoooo muchito  mi vida hemocha :v
+
+    </p>
+
+
+    <div class="corazones">
+
+        ♡ ♥ ♡
+
+    </div>
+
+
+</section>
+
+
+
+<script>
+
+
+/* =====================================================
+   CORAZONES QUE CAEN
+===================================================== */
+
+function crearCorazon() {
+
+
+    const corazon =
+        document.createElement("div");
+
+
+    corazon.className =
+        "corazon-flotante";
+
+
+    const formas = [
+
+        "♥",
+
+        "♡",
+
+        "❤",
+
+        "💕",
+
+        "💗",
+
+        "💖"
+
+    ];
+
+
+    corazon.innerHTML =
+        formas[
+            Math.floor(
+                Math.random() *
+                formas.length
+            )
+        ];
+
+
+    corazon.style.left =
+        Math.random() * 100 + "vw";
+
+
+    corazon.style.fontSize =
+        (14 + Math.random() * 25) + "px";
+
+
+    corazon.style.animationDuration =
+        (5 + Math.random() * 7) + "s";
+
+
+    document.body.appendChild(
+        corazon
+    );
+
+
+    setTimeout(
+
+        function() {
+
+            corazon.remove();
+
+        },
+
+        13000
+
+    );
+
+}
+
+
+/* Crear corazones */
+
+setInterval(
+
+    crearCorazon,
+
+    650
+
+);
+
+
+
+/* =====================================================
+   CORAZÓN AL HACER CLICK
+===================================================== */
+
+document.addEventListener(
+
+    "click",
+
+    function(event) {
+
+
+        const corazon =
+            document.createElement("div");
+
+
+        corazon.className =
+            "click-corazon";
+
+
+        corazon.innerHTML =
+            Math.random() > .5
+            ? "♥"
+            : "♡";
+
+
+        corazon.style.left =
+            event.clientX + "px";
+
+
+        corazon.style.top =
+            event.clientY + "px";
+
+
+        document.body.appendChild(
+            corazon
+        );
+
+
+        setTimeout(
+
+            function() {
+
+                corazon.remove();
+
+            },
+
+            1000
+
+        );
+
+    }
+
+);
+
+
+</script>
+
+
+</body>
+
+</html>
